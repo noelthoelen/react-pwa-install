@@ -11,7 +11,7 @@ export default function Demo() {
   const handleClick = () => {
     pwaInstall({
       title: "Install Web App",
-      logo: "src/logo.png",
+      logo: "demo/src/logo.png",
       features: (
         <ul>
           <li>Cool feature 1</li>
@@ -21,6 +21,7 @@ export default function Demo() {
         </ul>
       ),
       description: "This is a very good app that does a lot of useful stuff. ",
+      language: "es",
     })
       .then(() => {
         alert("App installed successfully or the install instruction was shown");
@@ -42,7 +43,7 @@ export default function Demo() {
 }
 
 render(
-  <ReactPWAInstallProvider>
+  <ReactPWAInstallProvider enableLogging="true">
     <Demo />
   </ReactPWAInstallProvider>,
   document.querySelector("#demo")

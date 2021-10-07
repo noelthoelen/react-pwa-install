@@ -1,3 +1,7 @@
+# Changes by Noël Thoelen
+- Added another property to PWAInstall : language (en (default), nl, de, es, fr)
+- For native platforms, we will not show the dialog anymore - Install is executed immediately
+
 # react-pwa-install
 
 [![npm package][npm-badge]][npm]

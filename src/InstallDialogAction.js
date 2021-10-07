@@ -1,13 +1,14 @@
 import React from "react";
 import { DialogActions, Typography, Button, Box } from "@material-ui/core";
 import { platforms } from "./Platforms";
+import { getLabel } from "./Translations";
 import { IOSShareIcon, FireFoxA2HSIcon, MenuIcon, OperaA2HSIcon } from "./Icons";
 
 function DialogActionWithInstructions(props) {
   return (
     <Box width="100%" display="flex" flexDirection="column">
       <Box>
-        <Typography variant="subtitle1">To install this app:</Typography>
+        <Typography variant="subtitle1">{getLabel("instructions", props.language)}</Typography>
         <ul>
           <li>
             <span style={{ display: "flex", alignItems: "center" }}>{props.action1}</span>
@@ -16,7 +17,7 @@ function DialogActionWithInstructions(props) {
         </ul>
       </Box>
       <Box width="100%" textAlign="right">
-        <Button onClick={props.onSubmit}>Ok</Button>
+        <Button onClick={props.onSubmit}>{getLabel("close", props.language)}</Button>
       </Box>
     </Box>
   );
@@ -28,9 +29,9 @@ export default function InstallDialogAction(props) {
       <DialogActions>
         {props.platform === platforms.NATIVE && (
           <>
-            <Button onClick={props.onClose}>Cancel</Button>
+            <Button onClick={props.onClose}>{getLabel("cancel", props.language)}</Button>
             <Button onClick={props.onSubmit} color="primary" variant="contained" disableElevation>
-              Install
+              {getLabel("install", props.language)}
             </Button>
           </>
         )}
@@ -38,61 +39,64 @@ export default function InstallDialogAction(props) {
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the share button:
+                {getLabel("idevice-action1", props.language)}
                 <IOSShareIcon />
               </>
             }
-            action2="then find and tap 'Add to Homescreen'"
+            action2={getLabel("idevice-action2", props.language)}
             onSubmit={props.onSubmit}
+            language={props.language}
           />
         )}
         {props.platform === platforms.FIREFOX && (
           <DialogActionWithInstructions
             action1={
               <>
-                Tap this icon on the address bar:
+                {getLabel("firefox-action1", props.language)}
                 <FireFoxA2HSIcon />
               </>
             }
-            action2="then tap '+Add to Homescreen'"
+            action2={getLabel("firefox-action2", props.language)}
             onSubmit={props.onSubmit}
+            language={props.language}
           />
         )}
         {props.platform === platforms.FIREFOX_NEW && (
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the menu button:
+                {getLabel("firefox-new-action1", props.language)}
                 <MenuIcon />
               </>
             }
-            action2="then tap 'Install'"
+            action2={getLabel("firefox-new-action2", props.language)}
             onSubmit={props.onSubmit}
+            language={props.language}
           />
         )}
         {props.platform === platforms.OPERA && (
           <DialogActionWithInstructions
             action1={
               <>
-                Tap the menu button:
+                {getLabel("opera-action1", props.language)}
                 <MenuIcon />
               </>
             }
             action2={
               <>
-                then tap &nbsp;'
+                {getLabel("opera-action2", props.language)}
                 <OperaA2HSIcon />
-                Home screen'
               </>
             }
             onSubmit={props.onSubmit}
+            language={props.language}
           />
         )}
         {props.platform === platforms.OTHER && (
           <Box width="100%" display="flex" flexDirection="column">
-            <Box>Unfortunately the install feature is not supported by your browser.</Box>
+            <Box>{getLabel("notsupported", props.language)}</Box>
             <Box width="100%" textAlign="right">
-              <Button onClick={props.onClose}>Ok</Button>
+              <Button onClick={props.onClose}>{getLabel("close", props.language)}</Button>
             </Box>
           </Box>
         )}
