@@ -1,6 +1,6 @@
 {
-  "name": "react-pwa-install",
-  "version": "1.0.12",
+  "name": "@noelthoelen/react-pwa-install",
+  "version": "1.0.2",
   "description": "Install support for your PWA on several platforms",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -36,6 +36,9 @@
   "homepage": "",
   "license": "MIT",
   "repository": "https://github.com/noelthoelen/react-pwa-install",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/noelthoelen"
+  },
   "keywords": [
     "react-component",
     "react",
