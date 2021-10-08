@@ -31,6 +31,11 @@ To use the package, you also need to install @material-ui/core.
 ```shell
 $ npm i --save react-pwa-install @material-ui/core
 ```
+Add .npmrc to your folder to acces the repository
+  registry=https://npm.pkg.github.com/noelthoelen
+  //npm.pkg.github.com/:_authToken=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 
+ 
+Next run npm install @noelthoelen/react-pwa-install
 
 ## Prerequisites
 
@@ -67,6 +72,7 @@ function App() {
         </ul>
       ),
       description: "This is a very good app that does a lot of useful stuff. ",
+      languafe: "en"
     })
       .then(() => alert("App installed successfully or instructions for install shown"))
       .catch(() => alert("User opted out from installing"));
@@ -111,6 +117,7 @@ The following options are available to customize the install dialog:
 | `logo (optional)`        | string          | -               | Path to an image representing the app, typically the icon |
 | `features (optional)`    | React.ReactNode | -               | A list of features, see "Usage" for an example            |
 | `description (optional)` | string          | -               | Description of the app                                    |
+| `language (optional)`    | string          | -               | language: en (default ), nl, fr, es, de                   |
 
 ## Customization
 

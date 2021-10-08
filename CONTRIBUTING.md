@@ -23,3 +23,5 @@
 - `npm run build` will build the component for publishing to npm and also bundle the demo app.
 
 - `npm run clean` will delete built resources.
+
+- `npm publish`will publish to gitHub package => make sure to check .npmrc

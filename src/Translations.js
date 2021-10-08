@@ -13,7 +13,7 @@ function labelEN (key) {
       return "CLOSE";
       break;    
     case "idevice-action1":
-      return "Tap the share button (see the bottom or upper right corner on your screen):";
+      return "Tap the share button in your browser's address bar (see the bottom or top your screen):";
       break;    
     case "idevice-action2":
       return "Then find and tap 'Add to Homescreen'";
@@ -65,7 +65,7 @@ function labelNL (key) {
       return "SLUIT";
       break;    
     case "idevice-action1":
-      return "Druk op de deel knop (zie beneden of rechts boven op uw scherm):";
+      return "Druk op de deel knop in de adresbalk van je browser (zie beneden of boven op uw scherm):";
       break;    
     case "idevice-action2":
       return "Vervolgens zoek en druk op 'Zet op beginscherm'";
@@ -117,7 +117,7 @@ function labelDE (key) {
       return "Schließen";
       break;    
     case "idevice-action1":
-      return "Drücken Sie den Share-Button (siehe unten oder oben rechts auf Ihrem Bildschirm):";
+      return "Drücken Sie den Share-Button in der Adressleiste Ihres Browsers (siehe unten oder oben auf Ihrem Bildschirm):";
       break;    
     case "idevice-action2":
       return "Dann suchen und drücken Sie 'Zum Startbildschirm hinzufügen'.";
@@ -169,7 +169,7 @@ function labelFR (key) {
       return "FERMER";
       break;    
     case "idevice-action1":
-      return "Appuyez sur le bouton 'share' (voir en bas ou en haut à droite de votre écran):";
+      return "Appuyez sur le bouton de partage dans la barre d'adresse de votre navigateur (voir en bas ou en haut de votre écran) :";
       break;    
     case "idevice-action2":
       return "Ensuite, recherchez et appuyez sur 'Ajouter à l'écran d'accueil'";
@@ -221,7 +221,7 @@ function labelES (key) {
       return "CERRAR";
       break;    
     case "idevice-action1":
-      return "Presione el botón de compartir (vea la parte inferior o superior derecha de su pantalla):";
+      return "Presione el botón de compartir en la barra de direcciones de su navegador (vea la parte inferior o superior de su pantalla):";
       break;    
     case "idevice-action2":
       return "Luego busque y presione 'Agregar a la pantalla de inicio'";
